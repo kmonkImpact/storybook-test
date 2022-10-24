@@ -4,7 +4,7 @@ import "./block.css";
 export const Block = ({header}) => {
   return (
     <div className="block">
-      <h2>{header}</h2>
+      <h1>{header}</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
