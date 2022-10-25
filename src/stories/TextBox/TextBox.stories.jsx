@@ -12,5 +12,5 @@ const Template = (args) => <TextBox {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  color: "#749e64",
+  color: "#749e54",
 };
