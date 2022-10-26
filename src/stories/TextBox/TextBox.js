@@ -13,7 +13,7 @@ const Box = styled.div`
 export const TextBox = ({color}) => {
   return (
     <Box color={color}>
-      <h2>Text Box</h2>
+      <h2>Text Box Pick a Color</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua.
