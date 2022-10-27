@@ -1,29 +1,37 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./button2.css";
+import "./buttonTwo.css";
 
 /**
  * Primary UI component for user interaction
  */
-export const button2 = ({primary, backgroundColor, size, label, ...props}) => {
+export const ButtonTwo = ({
+  primary,
+  backgroundColor,
+  size,
+  label,
+  ...props
+}) => {
   const mode = primary
-    ? "storybook-button2--primary"
-    : "storybook-button2--secondary";
+    ? "storybook-buttonTwo--primary"
+    : "storybook-buttonTwo--secondary";
   return (
-    <button2
-      type="button2"
-      className={["storybook-button2", `storybook-button2--${size}`, mode].join(
-        " "
-      )}
+    <ButtonTwo
+      type="button"
+      className={[
+        "storybook-buttonTwo",
+        `storybook-buttonTwo--${size}`,
+        mode,
+      ].join(" ")}
       style={backgroundColor && {backgroundColor}}
       {...props}
     >
       {label + " Kyle"}
-    </button2>
+    </ButtonTwo>
   );
 };
 
-button2.propTypes = {
+ButtonTwo.propTypes = {
   /**
    * Is this the principal call to action on the page?
    */
@@ -33,11 +41,11 @@ button2.propTypes = {
    */
   backgroundColor: PropTypes.string,
   /**
-   * How large should the button2 be?
+   * How large should the buttonTwo be?
    */
   size: PropTypes.oneOf(["small", "medium", "large", "extra-large"]),
   /**
-   * button2 contents
+   * buttonTwo contents
    */
   label: PropTypes.string.isRequired,
   /**
@@ -46,11 +54,11 @@ button2.propTypes = {
   onClick: PropTypes.func,
 };
 
-button2.defaultProps = {
+ButtonTwo.defaultProps = {
   backgroundColor: null,
   primary: false,
   size: "medium",
   onClick: undefined,
 };
 
-export default button2;
+export default ButtonTwo;
