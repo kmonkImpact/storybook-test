@@ -14,7 +14,7 @@
   line-height: 1;
 }
 .storybook-button--primary {
-  color: white;
+  color: red;
   background-color: #1ea7fd;
 }
 .storybook-button--secondary {
@@ -34,7 +34,38 @@
   font-size: 16px;
   padding: 12px 24px;
 }
-.storybook-button--extra-large {
+
+.storybook-buttonTwo {
+  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  border: 0;
+  border-radius: 3em;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+}
+.storybook-buttonTwo--primary {
+  color: white;
+  background-color: #1ea7fd;
+}
+.storybook-buttonTwo--secondary {
+  color: #333;
+  background-color: transparent;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+}
+.storybook-buttonTwo--small {
+  font-size: 12px;
+  padding: 10px 16px;
+}
+.storybook-buttonTwo--medium {
+  font-size: 14px;
+  padding: 11px 20px;
+}
+.storybook-buttonTwo--large {
+  font-size: 16px;
+  padding: 12px 24px;
+}
+.storybook-buttonTwo--extra-large {
   font-size: 28px;
   padding: 26px 48px;
 }
@@ -143,4 +174,4 @@ section .tip-wrapper svg path {
 }
 
 
-/*# sourceMappingURL=main.3c5ae646.css.map*/
+/*# sourceMappingURL=main.dc11748e.css.map*/
