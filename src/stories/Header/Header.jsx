@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import {Button} from "../Button/Button";
+import {ButtonRound} from "../ButtonRound/ButtonRound";
 import "./header.css";
 
 export const Header = ({user, onLogin, onLogout, onCreateAccount}) => (
@@ -37,12 +37,12 @@ export const Header = ({user, onLogin, onLogout, onCreateAccount}) => (
             <span className="welcome">
               Welcome, <b>{user.name}</b>!
             </span>
-            <Button size="small" onClick={onLogout} label="Log out" />
+            <ButtonRound size="small" onClick={onLogout} label="Log out" />
           </>
         ) : (
           <>
-            <Button size="small" onClick={onLogin} label="Log in" />
-            <Button
+            <ButtonRound size="small" onClick={onLogin} label="Log in" />
+            <ButtonRound
               primary
               size="small"
               onClick={onCreateAccount}
