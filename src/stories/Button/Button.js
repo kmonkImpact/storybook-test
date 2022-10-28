@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-const Button = styled.button`
+const ButtonComponent = styled.button`
   border: 0;
   border-radius: 3rem;
   cursor: pointer;
@@ -23,36 +23,43 @@ const Button = styled.button`
     font-size: 1.25rem;
     padding: 1.25rem 1.75rem;
   }
+  &.round {
+    border-radius: 3rem;
+  }
+  &.box {
+    border-radius: 0rem;
+  }
   &:hover {
     color: ${(props) => props.hoverColor};
     background-color: ${(props) => props.hoverBackgroundColor};
   }
 `;
 
-export const ButtonRound = ({
+export const Button = ({
   color,
   hoverColor,
   backgroundColor,
   hoverBackgroundColor,
   size,
+  shape,
   label,
   ...props
 }) => {
   return (
-    <Button
+    <ButtonComponent
       type="button"
-      className={`${size}`}
+      className={`${size} ${shape}`}
       color={color}
       hoverColor={hoverColor}
       backgroundColor={backgroundColor}
       hoverBackgroundColor={hoverBackgroundColor}
     >
       {label}
-    </Button>
+    </ButtonComponent>
   );
 };
 
-ButtonRound.propTypes = {
+Button.propTypes = {
   /**
    * What text color to use
    */
@@ -74,6 +81,10 @@ ButtonRound.propTypes = {
    */
   size: PropTypes.oneOf(["small", "medium", "large"]),
   /**
+   * What shape should the button be?
+   */
+  shape: PropTypes.oneOf(["round", "box"]),
+  /**
    * Button contents
    */
   label: PropTypes.string.isRequired,
@@ -83,11 +94,12 @@ ButtonRound.propTypes = {
   onClick: PropTypes.func,
 };
 
-ButtonRound.defaultProps = {
+Button.defaultProps = {
   color: "white",
   hoverColor: "black",
   backgroundColor: "black",
   hoverBackgroundColor: "white",
   size: "medium",
-  onClick: undefined,
+  shape: "round",
+  onClick: null,
 };
